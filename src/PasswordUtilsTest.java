@@ -54,12 +54,23 @@ public class PasswordUtilsTest {
     @Test 
     void testContainsTriple() {
         //Arrange
-        String password = " ";
+        String password = "paaasword";
+        //Act
+        boolean actual = PasswordUtils.containsTriple(password);
+        //Assert 
+        assertEquals(true, actual);
+    }
+
+    @Test 
+    void testWrongContainsTriple() {
+        //Arrange
+        String password = "vnofv";
         //Act
         boolean actual = PasswordUtils.containsTriple(password);
         //Assert 
         assertEquals(false, actual);
     }
+
     @Test 
     void testCountSpecialCharacters() {
         //Arrange
