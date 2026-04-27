@@ -101,6 +101,11 @@ public static boolean hasSufficientSpecialCharacters(String password, int minimu
 // Please have your tests in a separate commit from the implementation
 // Required: please use countSpecialCharacters as a helper method.
 // Don't just copy/paste the logic!
+
+if(minimum <= countSpecialCharacters(password))
+{
+    return true; 
+}
 return false;
 }
     
